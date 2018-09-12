@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h2>Questions</h2>
+    <p>What is your name?</p>
+    <p>What is your favorite dessert?</p>
+    <p>Do you like coffee or tea?</p>
+
+
+    <h2>Game</h2>
+    <form id="factsForm"
+        onsubmit="return checkAnswers()"
+        onreset="resetAnswers()">
+        <div>
+            <label>What fruit keeps the doctor away?</label>
+            <p><input type="text" name="doctor" required></p>
+        </div>
+        <div>
+            <label>What fruit has the best vitamin c?</label>
+            <p><input type="text" name="vitamin" required></p>
+        </div>
+        <div>
+            <label>What is the world's stinkiest fruit?</label>
+            <p><input type="type" name="stinky" required></p>
+        </div>
+        <button id="submit" type="submit">Submit</button>
+    </form>
+    <script src="check-answers.js"></script>
+    <script src="questionnaire.js"></script>
+<script>
+    var username = prompt('what is your name?')
+    console.log('username is', username);
+
+    alert('Hello ' + username + ' Welcome!');
+
+    var faveDessert = prompt('what is your fave dessert?');
+    console.log('faveDessert is', faveDessert);
+
+    alert('Wow ' + username + ' that sounds delicious!');
+
+    var faveBeverage = prompt('do you like coffee or tea?');
+    console.log('faveBeverage is', faveBeverage);
+
+    if (faveBeverage === "tea") {
+        alert('Smart choice ' + username);
+    }
+    else {
+        alert('Hmm, you should consider tea');
+    }
+</script>
+</body>
+</html>
